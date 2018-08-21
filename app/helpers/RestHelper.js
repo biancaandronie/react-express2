@@ -21,5 +21,27 @@ module.exports = {
                 error:error
             })
         })
+    },
+    delete: function(url,data){
+        return new Promise(function(success,error){
+            $.ajax({
+                url:url,
+                type:"DELETE",
+                data:data,
+                success:success,
+                error:error
+            })
+        })
+    },
+    put: function(url,data){
+        return new Promise(function(success,error){
+            $.ajax({
+                url:url,
+                type:"PUT",
+                data:data,
+                success:success,
+                error:error
+            })
+        })
     }
 }
